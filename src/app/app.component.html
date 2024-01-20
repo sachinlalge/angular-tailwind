@@ -133,16 +133,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="border-b dark:border-gray-700">
-              <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">Sachin</th>
-                <td class="px-4 py-3">sach&#64;gmail.com</td>
-                <td class="px-4 py-3">91986547123</td>
-                <td class="px-4 py-3">Admin</td>
+            <tr class="border-b dark:border-gray-700" *ngFor="let item of userData">
+              <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">{{item.username ? item.username : 'Lorem'}}</th>
+                <td class="px-4 py-3">{{item.email ? item.email : 'Lorem@gmail.com' }}</td>
+                <td class="px-4 py-3">{{item.mobile ? item.mobile : '9999999999'}}</td>
+                <td class="px-4 py-3">{{item.role ? item.role : 'NA'}}</td>
                 <td class="px-4 py-3">11-11-11</td>
               <td class="text-center px-4 py-3">
-                <button
+                <button (click)="onEdit(item)"
                   class="text-sm text-indigo-500 rounded-md p-2 px-3 hover:underline hover:opacity-70">Edit</button>
-                <button
+                <button (click)="deleteUser(item)"
                   class="text-sm text-red-500 rounded-md p-2 px-3 hover:underline hover:opacity-70">Delete</button>
               </td>
             </tr>
@@ -248,9 +248,17 @@
 
       <div
         class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center md:space-x-3 flex-shrink-0">
-        <button type="submit" (click)="postUserDetails()"
+        <button type="submit" *ngIf="showAddbtn" (click)="postUserDetails()"
           class="flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
           Add User
+        </button>
+        <button type="submit" *ngIf="showUpdatebtn" (click)="updateUser()"
+          class="flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
+          Update User
+        </button>
+        <button type="submit" (click)="resetForm()"
+          class="flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-red-700 rounded-lg focus:ring-4 focus:ring-red-200 dark:focus:ring-red-900 hover:bg-red-800">
+          Reset
         </button>
       </div>
     </form>
