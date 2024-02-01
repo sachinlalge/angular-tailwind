@@ -2,10 +2,10 @@
   "posts": [
     {
       "id": "cf8c",
-      "username": "sach",
-      "email": "sach@gmail.com",
-      "mobile": 2879546513,
-      "role": "PC"
+      "username": null,
+      "email": null,
+      "mobile": null,
+      "role": null
     },
     {
       "id": "81c2",
