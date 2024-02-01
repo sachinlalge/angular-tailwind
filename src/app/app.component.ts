@@ -20,7 +20,43 @@ export class AppComponent implements OnInit {
   formValue !: FormGroup;
   tableDataObj: tableDataModel = new tableDataModel();
 
-  userData: any;
+  userData: any = [
+    {
+      email: "abc@gmail.com",
+      mobile: "+91 895623157",
+      role: "Manager",
+    },
+    {
+      email: "",
+      mobile: "+91 12356486",
+      role: "Learner",
+    },
+    {
+      email: "xyz@gmail.com",
+      mobile: "+91 12356486",
+      role: "Trainer",
+    },
+    {
+      email: "admin@gmail.com",
+      mobile: "+91 6541326549",
+      role: "Admin",
+    },
+    {
+      email: "",
+      mobile: "+91 756984126",
+      role: "User",
+    },
+    {
+      email: "plki@gmail.com",
+      mobile: "+91 12356486",
+      role: "Manager",
+    },
+    {
+      email: "",
+      mobile: "+91 654512346",
+      role: "Admin",
+    },
+  ];
   showAddbtn: boolean = true;
   showUpdatebtn: boolean = false;
 
