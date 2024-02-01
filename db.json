@@ -1,13 +1,40 @@
 {
-    "posts": [
-      { "id": "1", "title": "a title" },
-      { "id": "2", "title": "another title" }
-    ],
-    "comments": [
-      { "id": "1", "text": "a comment about post 1", "postId": "1" },
-      { "id": "2", "text": "another comment about post 1", "postId": "1" }
-    ],
-    "profile": {
-      "name": "typicode"
+  "posts": [
+    {
+      "id": "cf8c",
+      "username": null,
+      "email": null,
+      "mobile": null,
+      "role": null
+    },
+    {
+      "id": "81c2",
+      "username": "sad",
+      "email": "aswqe",
+      "mobile": 54456,
+      "role": "Female"
+    },
+    {
+      "id": "b263",
+      "username": "satatrangi",
+      "email": "atarangi@gmail.com",
+      "mobile": 7894651230,
+      "role": "Male"
     }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": null
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": null
+    }
+  ],
+  "profile": {
+    "name": "typicode"
   }
+}
